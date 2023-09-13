@@ -70,11 +70,12 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
     - sama dengan **model** pada arsitektur lainnya.
     
   View:
-    - sama dengan **view** pada arsitektur lainnya.
+    - hampir sama dengan **view** pada arsitektur lainnya, tetapi lebih pasif daripada view pada arsitektur yang lain karena cenderung hanya lebih fokus menampilkan data ke client dan me_render_ user         interface. Pada arsitektur ini, logika lebih banyak diproses oleh ViewModel
     
   ViewModel:
-    -abstraksi dari view
-    - terdiri dari model 
+    - abstraksi dari view
+    - terdiri dari model
+    - mengurus logika presentasi dan state 
 
   MVVM memerlukan kode yang banyak
   MVVM lebih mudah dalam _unit testing_ karena kode yang _event driven_
