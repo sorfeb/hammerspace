@@ -9,6 +9,9 @@
   6. Routing URL aplikasi dalam berkas baru urls.py dalam direktori aplikasi untuk mengatur URL proyek.
   7. Menyesuaikan models.py dengan soal: membuat variable-variabel _name_, _amount_, _description_ sesuai dengen tipe datanya yaitu models.CharField, models.IntegerField, dan models.TextField. Tidak 
      lupa juga menambahkan nama, kelas, dan nama aplikasi dengan tipe data yang sama pada ketiganya yaitu models.CharField.
+  8. Jangan lupa menyesuaikan kode pada views.py agar dapat merender variabel yang telah dibuat dan juga main.html agar memiliki template variables untuk data-data tersebut (cth: {{ name }}).
+  9. Selanjutnya deploy aplikasi ini pada Adaptable menggunakan template Python App Template dan juga basis data PostgreSQL. Terakhir, setting launch command diisi dengan **python manage.py migrate && gunicorn hammerspace.wsgi**
+      
 ## Mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 Virtual environment berfungsi untuk mengisolasi package serta dependencies aplikasi tersebut agar tidak menimbulkan konflik dengan versi-versi lain yang ada di komputer lokal.
 Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment, tetapi hal tersebut bukanlah kebiasaan yang baik karena mengisolasikan proyek dari versi-versi Python yang ada di dalam komputer untuk mencegah ketidaksengajaan modifikasi dan konflik instalasi antar proyek lain merupakan _best practice_ dalam mengembangkan sebuah proyek aplikasi berbasis web.
