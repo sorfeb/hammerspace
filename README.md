@@ -12,6 +12,10 @@
   8. Jangan lupa menyesuaikan kode pada views.py agar dapat merender variabel yang telah dibuat dan juga main.html agar memiliki template variables untuk data-data tersebut (cth: {{ name }}).
   9. Selanjutnya deploy aplikasi ini pada Adaptable menggunakan template Python App Template dan juga basis data PostgreSQL. Terakhir, setting launch command diisi dengan **python manage.py migrate && gunicorn hammerspace.wsgi**
 
+*Selain unit testing pengecekan berjalannya URL di aplikasi dan penggunaan template yang sesuai, saya juga menambahkan 2 test baru pada tests.py: 
+  - test_model_creation yang berfungsi untuk menguji apakah pembuatan object dan atribut 'Product' sudah tepat.
+  - test_show_main_view yang berfungsi untuk simulasi HTTP GET request ke URL untuk menguji apakah request HTTP dan render template sudah berjalan dengan baik atau belum.
+
 ## Bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html
 ![image](https://github.com/sorfeb/hammerspace/assets/112263712/1a1fa9cf-15be-424b-a748-8a61cf7c4960)
 
