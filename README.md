@@ -1,7 +1,7 @@
 # **Link website: https://hammerspace.adaptable.app/main/**
 
 ## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas:
-  1. Pertama-tama, buatlah direktori baru bernama hammerspace yang berisi _virtual environment_ baru.https://github.com/sorfeb/hammerspace/blob/main/README.md
+  1. Pertama-tama, buatlah direktori baru bernama hammerspace yang berisi _virtual environment_ baru.
   2. Selanjutnya isi direktori tersebut dengan berbagai file esensial yang dibutuhkan seperti .gitignore, requirements, dan juga file-file project linenya dengan command startproject. Jika semua instalasi dan konfigurasi sudah selesai, lanjut dengan mengupload direktori ke GitHub.
   3. Buat aplikasi baru bernama _main_ dalam proyek hammerspace yang berisi file template (html), model, view, dan file-file lainnya dan mendaftarkannya ke dalam proyek.
   4. Template html diisi dengan kode agar dapat menampilkan halaman yang sesuai dengan kemauan.
@@ -29,7 +29,8 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
 
 ## Apakah itu MVC, MVT, MVVM dan apa perbedaan dari ketiganya?
 - **MVC** atau biasa disebut sebagai Model-View-Controller.
-  Model:
+
+   Model:
   - mengatur dan mengelola data dari aplikasi.
   - mewakili struktur data dan logika aplikasi yang berada di belakang tampilan.     
   - menghubungkan aplikasi dengan basis data dan mengatur interaksi dengan data tersebut.
@@ -46,7 +47,8 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
 ASP.NET MVC dan Spring MVC menggunakan arsitektur MVC.
 
 - **MVT** atau biasa disebut sebagai Model-View-Template
-  Model:
+
+   Model:
   - sama dengan **model** pada arsitektur lainnya
 
   View:
@@ -62,6 +64,7 @@ Memodifikasi dengan arsitektur ini relatif lebih mudah daripada memodifikasi pad
 Django menggunakan arsitektur MVT.
 
 -**MVVM** atau biasa disebut sebagai Model-View-ViewModel
+  
   Model: 
     - sama dengan **model** pada arsitektur lainnya.
     
