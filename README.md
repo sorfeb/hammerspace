@@ -14,6 +14,7 @@
 
 ## Bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html
 ![image](https://github.com/sorfeb/hammerspace/assets/112263712/1a1fa9cf-15be-424b-a748-8a61cf7c4960)
+
 Arsitektur framework yang digunakan di bagan di atas adalah MVT, atau Model-View-Template.
 1. Pertama-tama client mengakses website kita dari URL web yang ia masukkan di web browser client sendiri. Ini mengakibatkan client menginisiasi request ke controller (dalam konteks ini, Django sendiri bertindak sebagai controller) yang ada di antara Client dan View. Controller akan cek apakah resource website _available_ atau tidak.
 2. urls.py akan melakukan URL routing yang mengarahkan ke fungsi atau class View yang mana yang akan digunakan dan menentukan View yang mana yang akan meng_handle_ request HTTP berdasarkan request dari client. 
@@ -44,7 +45,7 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
   - perantara antara model dan view.
   - input berasal dari view, memprosesnya, dan memperbarui view.
 
-ASP.NET MVC dan Spring MVC menggunakan arsitektur MVC.
+  ASP.NET MVC dan Spring MVC menggunakan arsitektur MVC.
 
 - **MVT** atau biasa disebut sebagai Model-View-Template
 
@@ -59,11 +60,11 @@ ASP.NET MVC dan Spring MVC menggunakan arsitektur MVC.
   -  memisahkan kode HTML dari logika aplikasi.
   -  merancang tampilan yang akan diisi dengan data dari model melalui view.
 
-Arsitekturnya hampir sama dengan MVC, tetapi controller sudah diurus oleh template.
-Memodifikasi dengan arsitektur ini relatif lebih mudah daripada memodifikasi pada model MVC.
-Django menggunakan arsitektur MVT.
+  Arsitekturnya hampir sama dengan MVC, tetapi controller sudah diurus oleh template.
+  Memodifikasi dengan arsitektur ini relatif lebih mudah daripada memodifikasi pada model MVC.
+  Django menggunakan arsitektur MVT.
 
--**MVVM** atau biasa disebut sebagai Model-View-ViewModel
+- **MVVM** atau biasa disebut sebagai Model-View-ViewModel
   
   Model: 
     - sama dengan **model** pada arsitektur lainnya.
