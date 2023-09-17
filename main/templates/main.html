@@ -35,9 +35,9 @@
 
             <ul>
               {% for item in items %}
-                  <li>Name: {{ name }}</li>
-                  <li>Amount: {{ amount }}</li>
-                  <li>Description: {{ description }}</li>
+                  <li>Name: {{ item.name }}</li>
+                  <li>Amount: {{ item.amount }}</li>
+                  <li>Description: {{ item.description }}</li>
               {% endfor %}
             </ul>
             
