@@ -33,12 +33,13 @@
               <h1>YOUR ITEMS<span>:</span></h1>
             </div>
 
-            <h5>Name: </h5>
-            <p>{{ name }}</p>
-            <h5>Amount: </h5>
-            <p>{{ amount }}</p>
-            <h5>Description: </h5>
-            <p>{{ description }}</p>
+            <ul>
+              {% for item in items %}
+                  <li>Name: {{ name }}</li>
+                  <li>Amount: {{ amount }}</li>
+                  <li>Description: {{ description }}</li>
+              {% endfor %}
+            </ul>
             
         </div>
     </body>
