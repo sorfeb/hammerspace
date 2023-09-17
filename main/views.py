@@ -16,4 +16,4 @@ def show_main(request):
         'aplikasi': 'hammerspace'
     }
 
-    return render(request, "main.html", context)
+    return render(request, "main.html", context, items)
