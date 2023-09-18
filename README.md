@@ -91,6 +91,26 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
   Data dalam MVVM mengalir dalam satu arah: Model->ViewModel->View
 
 ## Apa perbedaan antara form POST dan form GET dalam Django?
+
+  **POST**:
+    - Digunakkan untuk _request_ yang dapat mengubah _state_ dari sistem (Cth: Membuat perubahan dalam _database_.
+    - Tidak dapat di_bookmark_
+    - Lebih aman daripada **GET**
+    - Contoh: Django login form
+
+  **GET**:
+    - Digunakkan untuk _request_ yang menerima data dari server tanpa membuah perubahan dalam _database_.
+    - Dapat di_bookmark_
+    - Tidak lebih aman daripada **POST**
+    - Jangan gunakkan GET untuk data sensitif seperti detail _login_ karena data terlihat di URL sehingga gampang untuk di_intercept_.
+    
 ## Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+
+**XML**
+ - Lebih aman daripada JSON
+
+**JSON**
+ - Lebih cepat daripada XML karena beban yang lebih sedikit dan sintaks yang _straightforward_
+ - 
 ## Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
