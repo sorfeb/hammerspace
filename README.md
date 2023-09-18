@@ -1,4 +1,4 @@
-![image](https://github.com/sorfeb/hammerspace/assets/112263712/437e8278-6823-4540-b737-cc8e8f6275a9)# **Link website: https://hammerspace.adaptable.app/main/** 
+**Link website: https://hammerspace.adaptable.app/main/** 
 Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue
 
 ## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas:
