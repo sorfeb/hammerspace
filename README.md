@@ -1,4 +1,4 @@
-# **Link website: https://hammerspace.adaptable.app/main/** 
+![image](https://github.com/sorfeb/hammerspace/assets/112263712/437e8278-6823-4540-b737-cc8e8f6275a9)# **Link website: https://hammerspace.adaptable.app/main/** 
 Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue
 
 ## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas:
@@ -89,3 +89,8 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
   MVVM lebih mudah dalam _unit testing_ karena kode yang _event driven_
   Titik masuk ke aplikasi seperti arsitektur MVT, yaitu pada View, tidak seperti MVC.
   Data dalam MVVM mengalir dalam satu arah: Model->ViewModel->View
+
+## Apa perbedaan antara form POST dan form GET dalam Django?
+## Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+## Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
