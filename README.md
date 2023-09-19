@@ -93,14 +93,12 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
 ## Apa perbedaan antara form POST dan form GET dalam Django?
 
   **POST**:
-  
     - Digunakkan untuk _request_ yang dapat mengubah _state_ dari sistem (Cth: Membuat perubahan dalam _database_.
     - Tidak dapat di_bookmark_
     - Lebih aman daripada **GET**
     - Contoh: Django login form
 
   **GET**:
-  
     - Digunakkan untuk _request_ yang menerima data dari server tanpa membuah perubahan dalam _database_.
     - Dapat di_bookmark_
     - Tidak lebih aman daripada **POST**
