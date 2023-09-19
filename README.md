@@ -106,15 +106,22 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
     
 ## Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
 
-**XML** (Extensible Markup Language)
+**XML** (Extensible Markup Language):
  - Digunakan untuk merepresentasikan data dengan cara yang dapat dibaca mesin
  - Lebih aman daripada JSON
  - lebih kompleks dibandingkan JSON
 
-**JSON** (JavaScript Object Notation)
- - digunakan untuk menyimpan dan mengirimkan data
- - Lebih cepat daripada XML karena beban yang lebih sedikit dan sintaks yang _straightforward_
- - lebih kompleks dibandingkan dengan JSON dan lebih sering digunakan dalam konteks bisnis
- - 
+
+**JSON** (JavaScript Object Notation):
+  - digunakan untuk menyimpan dan mengirimkan data
+  - Lebih cepat daripada XML karena beban yang lebih sedikit dan sintaks yang _straightforward_
+  - lebih kompleks dibandingkan dengan JSON dan lebih sering digunakan dalam konteks bisnis
+
+
+**HTML** (Hypertext Markup Language):
+  - adalah sebuah _markup_ language yang digunakan untuk membuat halaman web.
+  - digunakan untuk menampilkan data secara visual di browser web.
+  - Bukan untuk pertukaran data
+    
 ## Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
