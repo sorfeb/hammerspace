@@ -1,5 +1,5 @@
 **Link website: https://hammerspace.adaptable.app/main/** 
-Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue
+~Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue~
 
 ## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas:
   1. Pertama-tama, buatlah direktori baru bernama hammerspace yang berisi _virtual environment_ baru.
