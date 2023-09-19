@@ -1,5 +1,5 @@
-**Link website: https://hammerspace.adaptable.app/main/** 
-~Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue~
+# **Link website: https://hammerspace.adaptable.app/main/** 
+Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue
 
 ## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas:
   1. Pertama-tama, buatlah direktori baru bernama hammerspace yang berisi _virtual environment_ baru.
@@ -22,13 +22,13 @@
 ![image](https://github.com/sorfeb/hammerspace/assets/112263712/1a1fa9cf-15be-424b-a748-8a61cf7c4960)
 
 Arsitektur framework yang digunakan di bagan di atas adalah MVT, atau Model-View-Template.
-1. Pertama-tama client mengakses website kita dari URL web yang ia masukkan di web browser client sendiri. Ini mengakibatkan client menginisiasi request ke controller (dalam konteks ini, Django sendiri bertindak sebagai controller) yang ada di antara Client dan View. Controller akan cek apakah resource website _available_ atau tidak.
-2. urls.py akan melakukan URL routing yang mengarahkan ke fungsi atau class View yang mana yang akan digunakan dan menentukan View yang mana yang akan meng_handle_ request HTTP berdasarkan request dari client. 
-3. Selanjutnya, views.py yang bertindak sebagai komponen View akan menghandle request yang berguna untuk mengambil(fetch) data dari database melalui komponen Models, memproses input, dan juga menampilkan respons.
-4. models.py sebagai komponen Model akan menjadi perantara antara views dan database jika View memperlu berinteraksi dengan data yang ada di dalam database (read/write)
-5. berkas html yang ada di dalam komponen Template dan berisi tampilan webpage dengan placeholder yang dapat dimasukkan data akan dirender oleh View jika View mau menampilkan data ke client dalam bentuk webpage dalam konteks ini.
-6. Setelah semua sudah diproses, View akan mengembalikan HTTP response object yang berisi HTML yang sudah berisi data-data yang client sudah request.
-7. Akhirnya client menerima data melalui tampilan yang dikeluarkan oleh web browser client.
+  1. Pertama-tama client mengakses website kita dari URL web yang ia masukkan di web browser client sendiri. Ini mengakibatkan client menginisiasi request ke controller (dalam konteks ini, Django           sendiri bertindak sebagai controller) yang ada di antara Client dan View. Controller akan cek apakah resource website _available_ atau tidak.
+  2. urls.py akan melakukan URL routing yang mengarahkan ke fungsi atau class View yang mana yang akan digunakan dan menentukan View yang mana yang akan meng_handle_ request HTTP berdasarkan request        dari client. 
+  3. Selanjutnya, views.py yang bertindak sebagai komponen View akan menghandle request yang berguna untuk mengambil(fetch) data dari database melalui komponen Models, memproses input, dan juga             menampilkan respons.
+  4. models.py sebagai komponen Model akan menjadi perantara antara views dan database jika View memperlu berinteraksi dengan data yang ada di dalam database (read/write)
+  5. Berkas html yang ada di dalam komponen Template dan berisi tampilan webpage dengan placeholder yang dapat dimasukkan data akan dirender oleh View jika View mau menampilkan data ke client dalam         bentuk webpage dalam konteks ini.
+  6. Setelah semua sudah diproses, View akan mengembalikan HTTP response object yang berisi HTML yang sudah berisi data-data yang client sudah request.
+  7. Akhirnya client menerima data melalui tampilan yang dikeluarkan oleh web browser client.
       
 ## Mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 Virtual environment berfungsi untuk mengisolasi package serta dependencies aplikasi tersebut agar tidak menimbulkan konflik dengan versi-versi lain yang ada di komputer lokal.
@@ -124,4 +124,9 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
   - Bukan untuk pertukaran data
     
 ## Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
+  1. JSON lebih mudah dibaca dan dimengerti manusia karena menggunakan sintaks yang lebih mudah dan struktur yang lebih simpel daripada XML.
+  2. Native JavaScript sehingga lebih kompatibel dengan JavaScript.
+  3. Ukuran _file_ yang lebih kecil daripada XML sehingga lebih cepat untuk mentransfer data.
+
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
