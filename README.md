@@ -174,5 +174,7 @@ def show_main(request):
     }
     return render(request, "main.html", context)
 ```
-<div align=”center”> ![image](https://github.com/sorfeb/hammerspace/assets/112263712/97e4d114-310e-433a-8c96-ef25558505b2) </div>
+<p align="center"> 
+  <img src= "https://github.com/sorfeb/hammerspace/assets/112263712/97e4d114-310e-433a-8c96-ef25558505b2">
+</p>
 
