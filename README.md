@@ -20,7 +20,9 @@ Tampilan pada web belum tentu selaras dengan template main.html karena kemungkin
 
 
 ## Bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html
-<div align=”center”> ![image](https://github.com/sorfeb/hammerspace/assets/112263712/1a1fa9cf-15be-424b-a748-8a61cf7c4960) </div>
+<p align="center"> 
+  <img src= "https://github.com/sorfeb/hammerspace/assets/112263712/1a1fa9cf-15be-424b-a748-8a61cf7c4960">
+</p>
 
 Arsitektur framework yang digunakan di bagan di atas adalah MVT, atau Model-View-Template.
   1. Pertama-tama client mengakses website kita dari URL web yang ia masukkan di web browser client sendiri. Ini mengakibatkan client menginisiasi request ke controller (dalam konteks ini, Django           sendiri bertindak sebagai controller) yang ada di antara Client dan View. Controller akan cek apakah resource website _available_ atau tidak.
