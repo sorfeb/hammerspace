@@ -147,7 +147,7 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
 ![image](https://github.com/sorfeb/hammerspace/assets/112263712/ea6296ad-c61b-43f8-bf67-253849515681)
 
 ### BONUS #2
-'''python
+
 def show_main(request):
     #Take all objects of Item from the database
     inventory = Item.objects.all() 
@@ -163,5 +163,5 @@ def show_main(request):
         'items_counter' : total_amount
     }
     return render(request, "main.html", context)
-'''
+
 
