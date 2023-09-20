@@ -146,5 +146,22 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
 - JSON by ID:
 ![image](https://github.com/sorfeb/hammerspace/assets/112263712/ea6296ad-c61b-43f8-bf67-253849515681)
 
+### BONUS #2
+'''python
+def show_main(request):
+    #Take all objects of Item from the database
+    inventory = Item.objects.all() 
 
+    #Display number of items saved
+    total_amount = Item.objects.aggregate(Sum('amount'))['amount__sum'] or 0
+
+    context = {
+        'nama': 'Soros Febriano',
+        'kelas': 'PBP-A',
+        'aplikasi': 'hammerspace',
+        'items': inventory,
+        'items_counter' : total_amount
+    }
+    return render(request, "main.html", context)
+'''
 
