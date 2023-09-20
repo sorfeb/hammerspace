@@ -1,5 +1,5 @@
 from django.test import TestCase, Client
-from main.models import Product
+from main.models import Item
 from django.urls import reverse
 
 class mainTest(TestCase):
@@ -12,7 +12,7 @@ class mainTest(TestCase):
         self.assertTemplateUsed(response, 'main.html')
     
     def test_model_creation(self): #Creates an instance of Product with test attributes
-        my_instance = Product.objects.create(name="Test", amount="2", description = "this_is_a_test")
+        my_instance = Item.objects.create(name="Test", amount="2", description = "this_is_a_test")
         self.assertEqual(my_instance.name, "Test")
     
 

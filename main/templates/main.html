@@ -1,16 +1,19 @@
+{% extends 'base.html' %}
+ <!--from templates folder in root directory-->
 <!DOCTYPE html>
 
 <html>
 
     <head>
-        <!-- <meta charset="utf-8"> -->
+        <meta charset="utf-8">
         <title>HAMMERSPACE</title>
-        <!-- <link rel="stylesheet" href="stylesheet.css"> -->
+        <link rel="stylesheet" href="main_html.css">
     </head>
 
     <body>
+        {% block content %}
         <div class="header">
-            <div class="header-ribbon-logo">hammerspace</div>
+            <div class="header-ribbon-logo"><h1>hammerspace</h1></div>
             <div class="header-list">
               <ul>
                 <li>Profile</li>
@@ -28,25 +31,56 @@
             </div>
         </div>
 
+        <hr color="navy" size="5" width="100%">
+
         <div class="main">
-            <div class="copy-container">
-              <h1>YOUR ITEMS<span>:</span></h1>
+          <!-- <table>
+              <tr>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Description</th>
+                  <th>Date Added</th>
+              </tr>
+          
+              {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
+          
+              {% for product in products %}
+                  <tr>
+                      <td>{{item.name}}</td>
+                      <td>{{item.price}}</td>
+                      <td>{{item.description}}</td>
+                      <td>{{item.date_added}}</td>
+                  </tr>
+              {% endfor %}
+          </table> -->
+          
+          <br />
+          
+            <a href="{% url 'main:create_item' %}">
+                <button>
+                    Add New Item
+                </button>
+            </a>
+          
+            <div class="view_items">
+              <h3>YOUR ITEMS<span>:</span></h3>
+              <h4>Items saved: {{ items_counter }}</h4>
             </div>
 
             <ul>
               {% for item in items %}
                   <li>Name: {{ item.name }}</li>
                   <li>Amount: {{ item.amount }}</li>
-                  <li>Description: {{ item.description }}</li>
+                  <li>Description: {{ item.description }}</li><br>
+
               {% endfor %}
             </ul>
             
         </div>
+        {% endblock content %}
     </body>
 
-    
 </html>
-
 
 
 
