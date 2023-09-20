@@ -130,3 +130,21 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 
+## Mengakses kelima URL di poin 2 menggunakan Postman
+- XML:
+![image](https://github.com/sorfeb/hammerspace/assets/112263712/3052a776-5e3d-4eaa-a8f3-b3cbd8368bc2)
+
+- JSON:
+![image](https://github.com/sorfeb/hammerspace/assets/112263712/37b116ce-9199-4084-8050-05e0612ba3ab)
+
+- HTML:
+![image](https://github.com/sorfeb/hammerspace/assets/112263712/f0cc2367-2466-4807-b8af-e3c43f9d3c78)
+
+- XML by ID:
+![image](https://github.com/sorfeb/hammerspace/assets/112263712/9f047990-3d47-4ae2-9bec-4ba3a7a6dbd0)
+
+- JSON by ID:
+![image](https://github.com/sorfeb/hammerspace/assets/112263712/ea6296ad-c61b-43f8-bf67-253849515681)
+
+
+
