@@ -1,7 +1,7 @@
 # **Link website: https://hammerspace.adaptable.app/main/** 
 Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue
 
-## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas:
+## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas: #1
   1. Pertama-tama, buatlah direktori baru bernama hammerspace yang berisi _virtual environment_ baru.
   2. Selanjutnya isi direktori tersebut dengan berbagai file esensial yang dibutuhkan seperti .gitignore, requirements, dan juga file-file project linenya dengan command startproject. Jika semua instalasi dan konfigurasi sudah selesai, lanjut dengan mengupload direktori ke GitHub.
   3. Buat aplikasi baru bernama _main_ dalam proyek hammerspace yang berisi file template (html), model, view, dan file-file lainnya dan mendaftarkannya ke dalam proyek.
@@ -128,8 +128,16 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
   2. Native JavaScript sehingga lebih kompatibel dengan JavaScript.
   3. Ukuran _file_ yang lebih kecil daripada XML sehingga lebih cepat untuk mentransfer data.
 
-## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
-
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step #2.
+  1. Buat file **base.html** baru sebagai kerangka umum untuk halaman lainnya dalam web ini dan juga mendaftarkannya ke** settings.py** agar terdeteksi
+  2. Membuat file baru **forms.py** untuk membuat struktur web form baru
+  3. Membuat fungsi **create_item** pada views.py agar data produk otomatis bertambah ke database
+  4. Membuat file **create_item.html** baru untuk menampilkan halaman form penambah item
+  5. Selanjutnya, buat fungsi baru **show_xml** dan **show_json** untuk menyimpan hasil _query_ dari seluruh data Item yang terdaftar dan juga mereturn data berbentuk xml atau json
+  6. Tambah path _url_ ke **urlpatterns** agar fungsi **show_xml** dan **show_json** dapat diakses
+  7. Buka postman sebagai data viewer dan GET http://localhost:8000/xml atau http://localhost:8000/json untuk mengetes apakah data diterima dengan baik.
+  8. Data dalam bentuk xml atau json sudah dapat terlihat di Postman setelah GET.
+  
 ## Mengakses kelima URL di poin 2 menggunakan Postman
 - XML:
 ![image](https://github.com/sorfeb/hammerspace/assets/112263712/3052a776-5e3d-4eaa-a8f3-b3cbd8368bc2)
