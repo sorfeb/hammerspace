@@ -180,3 +180,17 @@ def show_main(request):
   <img src= "https://github.com/sorfeb/hammerspace/assets/112263712/97e4d114-310e-433a-8c96-ef25558505b2">
 </p>
 
+## Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?
+Django UserCreationForm adalah form _built-in_ yang tersedia oleh Django yang juga berguna untuk membuat form registrasi pengguna.
+
+**Kelebihan**:
+   - Django UserCreationForm menyediakan validasi bawaan seperti memvalidasi kekuatan         dan penyocokan kata sandi agar akun pengguna lebih aman.
+   - 
+  
+## Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
+## Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?
+## Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+
+
