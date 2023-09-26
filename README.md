@@ -206,6 +206,10 @@ Cookies adalah data kecil yang disimpan pada peramban pengguna oleh laman web da
 Django memanfaatkan cookies dengan mengidentifikasi ID _session_ spesial untuk mengidentifikasi peramban web yang digunakkan dan _session_ (sebenarnya data _session_ tersimpan di dalam server dan ID _session_ tersimpan pada cookie yang tersimpan di laptop/PC pengguna) yang sesuai dengan laman web saat ini. 
 
 ## Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+Penggunaan _cookies_ sebenarnya aman secara default karena data _session_ pengguna tersimpan dalam perangkat pengguna secara luring. Akan tetapi, pihak yang tidak bertanggung jawab dapat melakukan sebuah metode peretasan, yaitu "Cookie Hijacking", sebuah metode mengambil data dalam cookie komputer pengguna dengan memancing pengguna masuk ke dalam laman _login_ palsu. Saat pengguna tertipu, peretas dapat mengambil cookie yang berisi data-data sensitif dan juga melacak aktifitas pengguna pada laman web lainnya di masa depan. Metode ini juga dapat terlaksanakan saat pengguna menggunakan WiFi publik yang tidak aman untuk berselancar di internet.
+
+**Sumber:** https://www.mcafee.com/blogs/privacy-identity-protection/what-are-browser-cookies-and-how-do-i-manage-them/#:~:text=Like%20a%20phishing%20attack%2C%20cookie,browser%20and%20impersonate%20you%20online.
+
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 
