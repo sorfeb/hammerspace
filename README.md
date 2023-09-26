@@ -183,13 +183,30 @@ def show_main(request):
 ## Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?
 Django UserCreationForm adalah form _built-in_ yang tersedia oleh Django yang juga berguna untuk membuat form registrasi pengguna.
 
-**Kelebihan**:
-   - Django UserCreationForm menyediakan validasi bawaan seperti memvalidasi kekuatan         dan penyocokan kata sandi agar akun pengguna lebih aman.
-   - 
+  **Kelebihan**:
+     - Django UserCreationForm menyediakan validasi bawaan seperti memvalidasi kekuatan         dan penyocokan kata sandi agar akun pengguna lebih aman.
+     - Jauh lebih praktis daripada membuat kode form dari awal.
+     - Form dari Django ini terintegrasi dengan Django sehingga memodifikasi komponen-          komponen pada form ini akan lebih mudah dan manajemen data pengguna lebih efektif.
+  
+  **Kekurangan**:
+    - Secara _default_ form ini hanya menyediakan field _username_ dan _password_, maka        pemrogram harus membuat form custom untuk menambahkan field lainnya sesuai kemauan       pemrogram.
+    - Secara _default_ form ini juga dirancangn dengan sistem autentikasi bawaan Django,       maka pemrogram harus memodifikasi form tersebut lebih lanjut jika ingin sistem           autentikasi form yang lebih canggih.
+      
   
 ## Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
+**Autentikasi** adalah proses memverifikasi identitas pengguna yang biasa menggunakan _username_ dan _password_ untuk memastikan bahwa pengguna saat ini memiliki hak untuk mengakses aplikasi dan mencegah kebocoran data sensitif.
+
+**Otorisasi** adalah proses menentukan apakah pengguna memiliki izin akses kepada suatu fitur atau aksi pada sebuah aplikasi untuk mencegah pengaksesan informasi sensitif yang tidak berizin pada suatu aplikasi.
+
+Keduanya sangat penting untuk mencegah terjadinya pengaksesan informasi sensitif seperti _source code_ atau informasi pribadi pengguna lain dan juga mencegah manipulasi data yang tidak diinginkan.
+
 ## Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?
+Cookies adalah data kecil yang disimpan pada peramban pengguna oleh laman web dan berisi tentang informasi _session_ pengguna seperti informasi _login_ dan preferensi pengguna (Cth: bahasa yang digunakkan, _search history_, barang-barang dalam _shopping cart_, dll.). 
+
+Django memanfaatkan cookies dengan mengidentifikasi ID _session_ spesial untuk mengidentifikasi peramban web yang digunakkan dan _session_ (sebenarnya data _session_ tersimpan di dalam server dan ID _session_ tersimpan pada cookie yang tersimpan di laptop/PC pengguna) yang sesuai dengan laman web saat ini. 
+
 ## Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 
 
