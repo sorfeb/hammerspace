@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from main.forms import ItemForm
 from main.models import Item
@@ -7,20 +7,35 @@ from django.http import HttpResponse
 from django.core import serializers
 from django.db.models import Sum
 
-# Create your views here.
-def show_main(request):
-    #Take all objects of Item from the database
-    inventory = Item.objects.all() 
+#Login/Logout
+from django.shortcuts import redirect
+from django.contrib import messages  
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
-    #Display number of items saved
-    total_amount = Item.objects.aggregate(Sum('amount'))['amount__sum'] or 0
+#Cookies
+import datetime
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
+# Create your views here.
+@login_required(login_url='/login')
+def show_main(request):
+    
+    #Take all objects of Item from the current USER's database
+    inventory = Item.objects.filter(user=request.user) 
+
+    #Display number of items saved by USER
+    total_amount = inventory.aggregate(Sum('amount'))['amount__sum'] or 0
 
     context = {
-        'nama': 'Soros Febriano',
+        'nama': request.user.username,
         'kelas': 'PBP-A',
         'aplikasi': 'hammerspace',
         'items': inventory,
-        'items_counter' : total_amount
+        'items_counter' : total_amount,
+        'last_login': request.COOKIES['last_login']
     }
     return render(request, "main.html", context)
 
@@ -29,7 +44,9 @@ def create_item(request):
     form = ItemForm(request.POST or None)
 
     if form.is_valid() and request.method == "POST":
-        form.save()
+        item = form.save(commit=False)
+        item.user = request.user
+        item.save()
         return HttpResponseRedirect(reverse('main:show_main'))
 
     context = {'form': form}
@@ -57,4 +74,51 @@ def show_json_by_id(request, id):
     data = Item.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
+def register(request):
+    form = UserCreationForm()
 
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your account has been successfully created!')
+            return redirect('main:login')
+    context = {'form':form}
+    return render(request, 'register.html', context)
+
+def login_user(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            response = HttpResponseRedirect(reverse("main:show_main")) 
+            response.set_cookie('last_login', str(datetime.datetime.now()))
+            return response
+        else:
+            messages.info(request, 'Sorry, incorrect username or password. Please try again.')
+    context = {}
+    return render(request, 'login.html', context)
+
+def logout_user(request):
+    logout(request)
+    response = HttpResponseRedirect(reverse('main:login'))
+    response.delete_cookie('last_login')
+    return response
+
+# def plus_item(request):
+#     # Retrieve the Item instance based on the item_id
+#     item = get_object_or_404(Item, pk=item_id)
+
+#     # Call the plus_item method to increment the 'amount' field
+#     item.plus_item()
+
+#     return render(request, "create_item.html", context)
+
+# def minus_item(request):
+#     return render(request, "create_item.html", context)
+
+# def delete_item(request):
+
+#     return render(request, "create_item.html", context)

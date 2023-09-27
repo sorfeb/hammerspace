@@ -53,8 +53,8 @@
                   </tr>
               {% endfor %}
           </table> -->
-          
-          <br />
+
+            <br />
           
             <a href="{% url 'main:create_item' %}">
                 <button>
@@ -68,13 +68,36 @@
             </div>
 
             <ul>
-              {% for item in items %}
+              {% for item in items%}
                   <li>Name: {{ item.name }}</li>
                   <li>Amount: {{ item.amount }}</li>
+                    <!-- <a href="{% url 'main:plus_item' %}">
+                      <button>
+                          +
+                      </button>
+                    </a>
+                    <a href="{% url 'main:minus_item' %}">
+                      <button>
+                          -
+                      </button>
+                    </a>
+                    <a href="{% url 'main:delete_item' %}">
+                      <button>
+                          X
+                      </button>
+                    </a> -->
                   <li>Description: {{ item.description }}</li><br>
 
               {% endfor %}
             </ul>
+
+        <h5>Sesi terakhir login: {{ last_login }}</h5>
+
+        <a href="{% url 'main:logout' %}">
+          <button>
+              Logout
+          </button>
+        </a>
             
         </div>
         {% endblock content %}
