@@ -180,7 +180,7 @@ def show_main(request):
   <img src= "https://github.com/sorfeb/hammerspace/assets/112263712/97e4d114-310e-433a-8c96-ef25558505b2">
 </p>
 
-#TUGAS 4
+# TUGAS 4
 ## Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?
 Django UserCreationForm adalah form _built-in_ yang tersedia oleh Django yang juga berguna untuk membuat form registrasi pengguna.
 
@@ -213,6 +213,17 @@ Penggunaan _cookies_ sebenarnya aman secara default karena data _session_ penggu
 
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
-
-
-
+  1. import modul bawaan UserCreationForm, redirect, dan messages dari django.
+  2. Tambahkan potongan kode untuk fungsi baru ** _register_** agar pengguna dapat mendaftar akun baru dan jangan lupa redirect pengguna ke main.html setelah pendaftaran sukses.
+  3. Buatlah berkas baru _**register.html*_* untuk halaman pendaftaran pengguna baru dan jangan lupa daftarkan ke **_urls.py_**.
+  4. Buatlah fungsi baru bernama _**login**_ agar pengguna yang sudah terdaftar dapat masuk dalam laman web kembali.
+  5. Tambahkan fungsi _**login_user**_ dalam **_views.py_** untuk mengautentikasi apakah username dan password sudah benar (redirect ke main.html) atau belum (print error message).
+  6. Buatlah berkas baru **_login.html_** sebagai halaman untuk pengguna login dan jangan lupa daftarkan ke **_urls.py_**.
+  7. Buatlah fungsi baru bernama _**logout**_ agar pengguna yang sudah masuk dapat mengeluarkan akun dari halaman web.
+  8. Tambahkan tombol **_logout_** dalam main.html agar pengguna yang sudah masuk dapat menggunakan fungsi tersebut.
+  9. Jangan lupa menambahkan restriksi pada halaman **_main_** agar yang dapat mengakses hanya pengguna yang mempunyai akun untuk mengakses.
+  10. Tambahkan sebaris kode: @login_required(login_url='/login') di atas fungsi **_show_main_** untuk merestriksi.
+  11. Buatlah _cookie_ dengan mengimpor HttpResponseRedirect, reverse, dan datetime dan menambahkan cookie ** _last_login_** di dalam fungsi **_login_user_** agar kita dapat melihat kapan terakhir kali pengguna _login_.
+  12. Jangan lupa tambahkan 'last_login': request.COOKIES['last_login'] agar waktu terakhir login dapat muncul dalam main.html
+  13. Jangan lupa juga untuk menambahkan kode response.delete_cookie('last_login') dalam fungsi **_logout_user_** agar _cookie_ dihapus saat pengguna _logout_.
+  14. Asosiasi produk dengan USER agar setiap pengguna hanya memiliki akses pada _item_ yang sesuai ditambahkan oleh masing-masing USER.
