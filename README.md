@@ -1,6 +1,7 @@
 # **Link website: https://hammerspace.adaptable.app/main/** 
 Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue
 
+# TUGAS 2
 ## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas: #1
   1. Pertama-tama, buatlah direktori baru bernama hammerspace yang berisi _virtual environment_ baru.
   2. Selanjutnya isi direktori tersebut dengan berbagai file esensial yang dibutuhkan seperti .gitignore, requirements, dan juga file-file project linenya dengan command startproject. Jika semua instalasi dan konfigurasi sudah selesai, lanjut dengan mengupload direktori ke GitHub.
@@ -93,6 +94,7 @@ Ya, kita masih dapat membuat aplikasi web berbasis Django tanpa menggunakan virt
   Titik masuk ke aplikasi seperti arsitektur MVT, yaitu pada View, tidak seperti MVC.
   Data dalam MVVM mengalir dalam satu arah: Model->ViewModel->View
 
+# TUGAS 3
 ## Apa perbedaan antara form POST dan form GET dalam Django?
 
   **POST**:
@@ -227,3 +229,9 @@ Penggunaan _cookies_ sebenarnya aman secara default karena data _session_ penggu
   12. Jangan lupa tambahkan 'last_login': request.COOKIES['last_login'] agar waktu terakhir login dapat muncul dalam main.html
   13. Jangan lupa juga untuk menambahkan kode response.delete_cookie('last_login') dalam fungsi **_logout_user_** agar _cookie_ dihapus saat pengguna _logout_.
   14. Asosiasi produk dengan USER agar setiap pengguna hanya memiliki akses pada _item_ yang sesuai ditambahkan oleh masing-masing USER.
+
+## DUMMY DATAS
+![image](https://github.com/sorfeb/hammerspace/assets/112263712/de5aee3a-ad76-4dc1-90d6-26d7bd992376)
+![image](https://github.com/sorfeb/hammerspace/assets/112263712/3bd19b57-f030-4ea5-8d4f-ab61055d4c48)
+
+
