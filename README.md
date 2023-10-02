@@ -235,3 +235,36 @@ Penggunaan _cookies_ sebenarnya aman secara default karena data _session_ penggu
 ![image](https://github.com/sorfeb/hammerspace/assets/112263712/3bd19b57-f030-4ea5-8d4f-ab61055d4c48)
 
 
+# TUGAS 4
+## Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
+Element selector lebih cepat dan mudah digunakkan. Gunakkan element selector saat ingin mengaplikasikan CSS secara seragam pada banyak elemen seperti <p> (text)
+
+## Jelaskan HTML5 Tag yang kamu ketahui.
+  - **<br>**: Adalah single line break yang berguna untuk membagi dokumen dengan sebuah garis pembatas yang merentang layar.
+  - **<div>**: Tag yang sangat berguna untuk mengelompokan elemen-elemen dalam HTML agar menjadi lebih runtut dan rapi.
+  - **<h1>** to **<h6>**: Membuat text bersifat heading dari 1 (paling besar) sampai 6 (paling kecil).
+  - **<img>**: Mendefinisi sebuah gambar (image).
+  - **<meta>**: Mendefinisikan metadata dokumen HTML yang berguna untuk memberi informasi seperti: character  encoding, author, description, dan lain-lain (tidak terlihat oleh viewer).
+  - **<ul>**: Mendefinisikan sebuah _unordered list_.
+    
+## Jelaskan perbedaan antara margin dan padding.
+<p align="center"> 
+  <img src= "https://i1.wp.com/www.differencebetween.com/wp-content/uploads/2014/12/Difference-Between-Margin-and-Padding.png">
+</p>
+
+**Margin**: - Merepresentasikan ruang yang di luar **border** elemen.
+            - Digunakkan untuk membuat ruang antara elemen.
+            - Tidak memengaruhi dimensi elemen.
+
+**Padding**: - Merepresentasi ruang antara **content** elemen dan **border** elemen.
+             - Digunakkan untuk membuat ruang antara dalam elemen
+             - Memengaruhi dimensi elemen.
+
+## Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+1. Tailwind **bukan** sebuah UI kit, sedangkan Bootstrap **adalah** sebuah UI kit yang menyediakan template, buttons, tabs, dll. untuk mempercantik desain laman web.
+2. Tailwind memperbolehkan pengguna untuk lebih fleksibel dalam berkustomisasi, sedangkan Bootstrap mempermudah pengguna dengan menyediakan komponen yang telah dibuat oleh Bootstrap.
+3. Tailwind menggunakan utility-first approach, Bootstrap menggunakan component-based approach.
+
+Sebaiknya gunakan Tailwind jika ingin mengkustomisasi laman sesuai kemauan sendiri secara detail, tetapi gunakkan Bootstrap jika ingin mempercantik laman dengan komponen yang telah disediakan dengan cepat.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
