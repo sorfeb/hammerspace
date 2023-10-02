@@ -187,13 +187,13 @@ def show_main(request):
 Django UserCreationForm adalah form _built-in_ yang tersedia oleh Django yang juga berguna untuk membuat form registrasi pengguna.
 
   **Kelebihan**:
-     - Django UserCreationForm menyediakan validasi bawaan seperti memvalidasi kekuatan         dan penyocokan kata sandi agar akun pengguna lebih aman.
+     - Django UserCreationForm menyediakan validasi bawaan seperti memvalidasi kekuatan dan penyocokan kata sandi agar akun pengguna lebih aman.
      - Jauh lebih praktis daripada membuat kode form dari awal.
-     - Form dari Django ini terintegrasi dengan Django sehingga memodifikasi komponen-          komponen pada form ini akan lebih mudah dan manajemen data pengguna lebih efektif.
+     - Form dari Django ini terintegrasi dengan Django sehingga memodifikasi komponen-komponen pada form ini akan lebih mudah dan manajemen data pengguna lebih efektif.
   
   **Kekurangan**:
-    - Secara _default_ form ini hanya menyediakan field _username_ dan _password_, maka        pemrogram harus membuat form custom untuk menambahkan field lainnya sesuai kemauan       pemrogram.
-    - Secara _default_ form ini juga dirancangn dengan sistem autentikasi bawaan Django,       maka pemrogram harus memodifikasi form tersebut lebih lanjut jika ingin sistem           autentikasi form yang lebih canggih.
+    - Secara _default_ form ini hanya menyediakan field _username_ dan _password_, maka pemrogram harus membuat form custom untuk menambahkan field lainnya sesuai kemauan pemrogram.
+    - Secara _default_ form ini juga dirancangn dengan sistem autentikasi bawaan Django, maka pemrogram harus memodifikasi form tersebut lebih lanjut jika ingin sistem autentikasi form yang lebih canggih.
       
   
 ## Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
@@ -240,12 +240,12 @@ Penggunaan _cookies_ sebenarnya aman secara default karena data _session_ penggu
 Element selector lebih cepat dan mudah digunakkan. Gunakkan element selector saat ingin mengaplikasikan CSS secara seragam pada banyak elemen seperti <p> (text)
 
 ## Jelaskan HTML5 Tag yang kamu ketahui.
-  - **<br>**: Adalah single line break yang berguna untuk membagi dokumen dengan sebuah garis pembatas yang merentang layar.
-  - **<div>**: Tag yang sangat berguna untuk mengelompokan elemen-elemen dalam HTML agar menjadi lebih runtut dan rapi.
-  - **<h1>** to **<h6>**: Membuat text bersifat heading dari 1 (paling besar) sampai 6 (paling kecil).
-  - **<img>**: Mendefinisi sebuah gambar (image).
-  - **<meta>**: Mendefinisikan metadata dokumen HTML yang berguna untuk memberi informasi seperti: character  encoding, author, description, dan lain-lain (tidak terlihat oleh viewer).
-  - **<ul>**: Mendefinisikan sebuah _unordered list_.
+  - **"<br>"**: Adalah single line break yang berguna untuk membagi dokumen dengan sebuah garis pembatas yang merentang layar.
+  - **"<div>"**: Tag yang sangat berguna untuk mengelompokan elemen-elemen dalam HTML agar menjadi lebih runtut dan rapi.
+  - **"<h1>"** to **"<h6>"**: Membuat text bersifat heading dari 1 (paling besar) sampai 6 (paling kecil).
+  - **"<img>"**: Mendefinisi sebuah gambar (image).
+  - **"<meta>"**: Mendefinisikan metadata dokumen HTML yang berguna untuk memberi informasi seperti: character  encoding, author, description, dan lain-lain (tidak terlihat oleh viewer).
+  - **"<ul>"**: Mendefinisikan sebuah _unordered list_.
     
 ## Jelaskan perbedaan antara margin dan padding.
 <p align="center"> 
