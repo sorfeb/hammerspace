@@ -4,103 +4,101 @@
 
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <title>HAMMERSPACE</title>
-        <link rel="stylesheet" href="main_html.css">
-    </head>
+  <head>
+      <meta charset="utf-8">
+      <title>HAMMERSPACE</title>
+      <link rel="stylesheet" type="text/css" href="main_html.css">
+  </head>
 
-    <body>
-        {% block content %}
-        <div class="header">
-            <div class="header-ribbon-logo"><h1>hammerspace</h1></div>
-            <div class="header-list">
-              <ul>
-                <li>Profile</li>
-                <li>Settings</li>
-                <li>Contact us</li>
-              </ul>
+  <body>
+      {% block content %}
+      <div class="header">
+
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">hammerspace</h1>
+              <p class="lead">All in one items stock manager</p>
             </div>
-            <div class="nama_dan_kelas">
-              <h5>Nama: </h5>
-              <p>{{ nama }}</p>
-              <h5>Kelas: </h5>
-              <p>{{ kelas }}</p>
-              <h5>Aplikasi: </h5>
-              <p>{{ aplikasi }}</p>
-            </div>
-        </div>
+          </div>
 
-        <hr color="navy" size="5" width="100%">
+          <div class="nama_dan_kelas">
+            <h5>Nama: </h5>
+            <p>{{ nama }}</p>
+            <h5>Kelas: </h5>
+            <p>{{ kelas }}</p>
+          </div>
 
-        <div class="main">
-          <!-- <table>
-              <tr>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Description</th>
-                  <th>Date Added</th>
-              </tr>
+      </div>
+
+      <hr color="navy" size="5" width="100%">
+
+      <div class="main">
           
-              {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
-          
-              {% for product in products %}
-                  <tr>
-                      <td>{{item.name}}</td>
-                      <td>{{item.price}}</td>
-                      <td>{{item.description}}</td>
-                      <td>{{item.date_added}}</td>
-                  </tr>
-              {% endfor %}
-          </table> -->
-
-            <br />
-          
-            <a href="{% url 'main:create_item' %}">
-                <button>
-                    Add New Item
-                </button>
-            </a>
-          
-            <div class="view_items">
-              <h3>YOUR ITEMS<span>:</span></h3>
-              <h4>Items saved: {{ items_counter }}</h4>
-            </div>
-            
-          </table>
-            {% for item in items%}
-              <tr>
-                <td>Name: {{ item.name }}</li>
-                <td>Amount: {{ item.amount }}</li>
-                <td>Description: {{ item.description }}</li><br>
-                <td>
-                    <a href="{% url 'main:edit_product' item.pk %}">
-                        <button>
-                            Edit
-                        </button>
-                    </a>
-                    <a href="{% url 'main:delete_product' item.pk %}">
-                      <button>
-                          Delete
-                      </button>
-                  </a>
-                </td>
-              </tr>
-            {% endfor %}
-          </table>
-                
-
-        <h5>Sesi terakhir login: {{ last_login }}</h5>
-
-        <a href="{% url 'main:logout' %}">
-          <button>
-              Logout
-          </button>
+        <a href="{% url 'main:create_item' %}">
+            <button>
+                Add New Item
+            </button>
         </a>
-            
+          
+        <div class="view_items">
+          <h3>YOUR ITEMS<span>:</span></h3>
+          <h4>Items saved: {{ items_counter }}</h4>
         </div>
-        {% endblock content %}
-    </body>
+
+        <div class="row">
+            {% for item in items%}
+                <div class="col-md-4 mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="item_image">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ item.name }}</h5>
+                          <p class="card-text">{{ item.description }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">{{ item.amount }}</li>
+                        </ul>
+
+                      <div class="card-body">
+                          <a href="{% url 'main:edit_product' item.pk %}">
+                            <button type="button" class="btn btn-info custom-button" type="button">
+                                Edit
+                            </button>
+                          </a>
+                          
+                          <a href="{% url 'main:delete_product' item.pk %}">
+                            <button class="btn btn-danger custom-button text-right" type="button">
+                                Delete
+                            </button>
+                          </a>
+                      </div>
+                    </div>
+                </div>
+            {% endfor %}
+      </div>
+          
+      </div>
+
+      <!-- Footer-->
+      <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; Soros Febriano 2023</div></div>
+                <div class="col-auto">
+
+                    <a href="{% url 'main:logout' %}">
+                      <button type="button" class="btn btn-primary">Logout</button>
+                    </a>
+
+                    <p>Sesi terakhir login: {{ last_login }}</p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+      {% endblock content %}
+
+  </body>
 
 </html>
 

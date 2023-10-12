@@ -9,3 +9,7 @@
     font-family: cursive;
     padding: 20px 20px 20px 40px;
   }
+
+  .custom-button {
+    margin-right: 10px;
+}
