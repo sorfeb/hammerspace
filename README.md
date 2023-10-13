@@ -235,14 +235,14 @@ Penggunaan _cookies_ sebenarnya aman secara default karena data _session_ penggu
 ![image](https://github.com/sorfeb/hammerspace/assets/112263712/3bd19b57-f030-4ea5-8d4f-ab61055d4c48)
 
 
-# TUGAS 4
+# TUGAS 5
 ## Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
 Element selector lebih cepat dan mudah digunakkan. Gunakkan element selector saat ingin mengaplikasikan CSS secara seragam pada banyak elemen seperti <p> (text)
 
 ## Jelaskan HTML5 Tag yang kamu ketahui.
   - **&lt;br&gt;**: Adalah single line break yang berguna untuk membagi dokumen dengan sebuah garis pembatas yang merentang layar.
   - **&lt;div&gt;**: Tag yang sangat berguna untuk mengelompokan elemen-elemen dalam HTML agar menjadi lebih runtut dan rapi.
-  - **&lt;h1&gt;** to **"<h6>"**: Membuat text bersifat heading dari 1 (paling besar) sampai 6 (paling kecil).
+  - **&lt;h1&gt;** to **&lt;h6&gt;**: Membuat text bersifat heading dari 1 (paling besar) sampai 6 (paling kecil).
   - **&lt;img&gt;**: Mendefinisi sebuah gambar (image).
   - **&lt;meta&gt;**: Mendefinisikan metadata dokumen HTML yang berguna untuk memberi informasi seperti: character  encoding, author, description, dan lain-lain (tidak terlihat oleh viewer).
   - **&lt;ul&gt;**: Mendefinisikan sebuah _unordered list_.
