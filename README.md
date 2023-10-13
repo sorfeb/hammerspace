@@ -240,12 +240,12 @@ Penggunaan _cookies_ sebenarnya aman secara default karena data _session_ penggu
 Element selector lebih cepat dan mudah digunakkan. Gunakkan element selector saat ingin mengaplikasikan CSS secara seragam pada banyak elemen seperti <p> (text)
 
 ## Jelaskan HTML5 Tag yang kamu ketahui.
-  - **"<br>"**: Adalah single line break yang berguna untuk membagi dokumen dengan sebuah garis pembatas yang merentang layar.
-  - **"<div>"**: Tag yang sangat berguna untuk mengelompokan elemen-elemen dalam HTML agar menjadi lebih runtut dan rapi.
-  - **"<h1>"** to **"<h6>"**: Membuat text bersifat heading dari 1 (paling besar) sampai 6 (paling kecil).
-  - **"<img>"**: Mendefinisi sebuah gambar (image).
-  - **"<meta>"**: Mendefinisikan metadata dokumen HTML yang berguna untuk memberi informasi seperti: character  encoding, author, description, dan lain-lain (tidak terlihat oleh viewer).
-  - **"<ul>"**: Mendefinisikan sebuah _unordered list_.
+  - **&lt;br&gt;**: Adalah single line break yang berguna untuk membagi dokumen dengan sebuah garis pembatas yang merentang layar.
+  - **&lt;div&gt;**: Tag yang sangat berguna untuk mengelompokan elemen-elemen dalam HTML agar menjadi lebih runtut dan rapi.
+  - **&lt;h1&gt;** to **"<h6>"**: Membuat text bersifat heading dari 1 (paling besar) sampai 6 (paling kecil).
+  - **&lt;img&gt;**: Mendefinisi sebuah gambar (image).
+  - **&lt;meta&gt;**: Mendefinisikan metadata dokumen HTML yang berguna untuk memberi informasi seperti: character  encoding, author, description, dan lain-lain (tidak terlihat oleh viewer).
+  - **&lt;ul&gt;**: Mendefinisikan sebuah _unordered list_.
     
 ## Jelaskan perbedaan antara margin dan padding.
 <p align="center"> 
@@ -288,9 +288,70 @@ Sebaiknya gunakan Tailwind jika ingin mengkustomisasi laman sesuai kemauan sendi
 
 # TUGAS 6
 ## Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+  **Asychronous Programming**:
+    - Proses dilakukan secara paralel, sehingga tidak perlu menunggu proses lain untuk selesai terlebih dahulu.
+    - Lebih cepat dan mengurangi waktu _lag_.
+    - Lebih mudah untuk _scaling_.
+
+  **Synchronous Programming**:
+    - Proses dilakukan secara berurut, sehingga perlu menunggu proses sebelumnya untuk selesai terlebih dahulu.
+    - Lebih lambat daripada Asynchronous programming
+    - Lebih mudah untuk dimengerti dan lebih praktis.
+    
 ## Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+  Event-driven programming adalah paradigma programming yang berfokus pada merespon _event_ pada saat _event_ tersebut terjadi dan biasanya diproses oleh _event handlers_, sehingga lebih fleksibel   untuk membuat halaman web yang responsif dan fungsional.
+  
+  Contoh penerapannya dalam tugas ini adalah:
+
+```python
+        function addProduct() {
+        fetch("{% url 'main:add_item_ajax' %}", {
+            method: "POST",
+            body: new FormData(document.querySelector('#form'))
+        }).then(refreshProducts)
+
+        document.getElementById("form").reset()
+        return false
+      }
+
+      document.getElementById("button_add").onclick = addProduct
+```
+yang terhubung pada:
+
+```html
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product by AJAX</button>
+```
+
+Dalam kode tersebut, saat tombol "Add Product by AJAX" ditekan, maka sebuah _event_ akan di_trigger_ dan script yang terhubung pada tombol tersebut tanpa me-_reload_ halaman web sehingga proses ini sangat responsif.
+    
 ## Jelaskan penerapan asynchronous programming pada AJAX.
+AJAX atau Asynchronous JavaScript and XML dapat memungkinkan pengguna untuk menerima data dari server web tanpa menunggu halaman untuk reload dan mempebolehkan beberapa kode lain untuk berjalan sekaligus sehingga dapat dikatakan AJAX mengimplementasi asynchronous programming. Contoh dalam AJAX:
+
+  **Event-Handling**
+    AJAX menerapkan event handling yang menjalankan fungsi secara asynchronous di komputer user sehingga tidak perlu di_refresh_.
+
+  **Event Listeners**
+    AJAX menyediakan event-listeners yang dapat mendeteksi aksi yang dilakukan oleh user dan event yang terjadi di halaman. Contoh: on-click, onload, onerror, onreadystatechange.
+    
+    
 ## Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+
+**Fetch API**:
+- Lebih baru dan native JavaScript
+- Syntax lebih mudah dibaca dan ditulis
+- Lebih _lightweight_
+- Kompatibel dengan semua browser modern kecuali _Internet Explorer_
+- tidak mempunyai built-in support untuk JSONP.
+- Tidak akan reject request HTTP walaupun error status 404 atau 500
+- Tidak akan menerima atau mengirim cookies dari server sehingga dapat terjadi request yang tidak terautentikasi.
+- 
+**jQuery**:
+- Sudah ada lebih lama dan lebih populer
+- built-in support untuk JSONP.
+- Kompatibel dengan semua browser modern termasuk _Internet Explorer_
+
+Menurut saya, Fetch API lebih baik untuk digunakan karena lebih lightweight dan syntax lebih mudah dimengerti sehingga lebih baik untuk belajar PBP.
+
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
   1. Buat fungsi dalam views.py add_product_ajax dan get_product_json yang berfungsi untuk fetch data untuk cards dan juga menambah items
   2. Tambahkan kedua fungsi tersebut ke dalam urls.py
