@@ -285,3 +285,18 @@ Sebaiknya gunakan Tailwind jika ingin mengkustomisasi laman sesuai kemauan sendi
 ```
 
   2. Kustomisasi sesuai selera dari link template Bootstrap
+
+# TUGAS 6
+## Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+## Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+## Jelaskan penerapan asynchronous programming pada AJAX.
+## Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+  1. Buat fungsi dalam views.py add_product_ajax dan get_product_json yang berfungsi untuk fetch data untuk cards dan juga menambah items
+  2. Tambahkan kedua fungsi tersebut ke dalam urls.py
+  3. Buat script yang berfungsi untuk menampilkan data dan disajikan dalam bentuk cards dari fungsi get_product_json yang telah dibuat
+  4. Tambahkan script refresh agar tampilan produk dalam cards terbarui dengan memuat ulang string html pada main.
+  5. Selanjutnya, tambahkan kode html untuk form add product menggunakan AJAX
+  6. Buat script dengan addProduct() agar form yang telah dibuat dapat berfungsi sebagai pengganti add product biasa.
+  7. Tambahkan juga fungsi on-click pada button Add Product
+  8. Deploy pada SaaS PBP
