@@ -162,8 +162,8 @@ def add_item_ajax(request):
         description = request.POST.get("description")
         user = request.user
 
-        new_product = Item(name=name, amount=amount, description=description, user=user)
-        new_product.save()
+        new_item = Item(name=name, amount=amount, description=description, user=user)
+        new_item.save()
 
         return HttpResponse(b"CREATED", status=201)
 

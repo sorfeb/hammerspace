@@ -1,15 +1,8 @@
-.nama_dan_kelas {
-    float: right; /* Right-align the content within this div */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.content_section {
-    background-color: #3696e1;
-    margin-bottom: 30px;
-    color: #000000;
-    font-family: cursive;
-    padding: 20px 20px 20px 40px;
-  }
-
-  .custom-button {
-    margin-right: 10px;
+@font-face {
+  font-family:'SEAGRAM';
+  src: url('./static/fonts/Seagram.ttf');
 }

@@ -1,47 +1,49 @@
 {% extends 'base.html' %}
  <!--from templates folder in root directory-->
-<!DOCTYPE html>
 
-<html>
+{% block meta %}
+    <title>Inventory</title>
+    <style>
+      body{
+        background-image:url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/061c5ef8-2616-48a4-af21-9f97322673b3/dfh1lkr-697d47f2-83ba-4c51-b946-5e3e8a09b2e4.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA2MWM1ZWY4LTI2MTYtNDhhNC1hZjIxLTlmOTczMjI2NzNiM1wvZGZoMWxrci02OTdkNDdmMi04M2JhLTRjNTEtYjk0Ni01ZTNlOGEwOWIyZTQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ovjcHpSffACBKemjuREadec3n6c4WRY8uPgZPCCrnGM);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-  <head>
-      <meta charset="utf-8">
-      <title>HAMMERSPACE</title>
-      <link rel="stylesheet" type="text/css" href="main_html.css">
-  </head>
+      footer {
+      position: fixed;
+      bottom: 0;
+      clear: both;
+      float: none;
+      }
 
-  <body>
-      {% block content %}
-      <div class="header">
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400&family=Chivo:wght@700&family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    
+{% endblock meta %}
 
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">hammerspace</h1>
-              <p class="lead">All in one items stock manager</p>
-            </div>
-          </div>
+{% block content %}
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
-          <div class="nama_dan_kelas">
-            <h5>Nama: </h5>
+          <h1 class="flex-initial w-[55px] text-red-600 text-9xl font-normal font-['Killigrew']">Hammerspace</h1>
+
+          <div class="flex-initial nama_dan_kelas font-[Almarai] text-red-600">
             <p>{{ nama }}</p>
-            <h5>Kelas: </h5>
             <p>{{ kelas }}</p>
           </div>
 
       </div>
 
-      <hr color="navy" size="5" width="100%">
-
       <div class="main">
           
         <a href="{% url 'main:create_item' %}">
-            <button>
+            <button class="btn btn-primary">
                 Add New Item
             </button>
         </a>
 
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Item by AJAX</button>
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product by AJAX</button>
 
           
         <div class="view_items">
@@ -49,60 +51,40 @@
           <h4>Items saved: {{ items_counter }}</h4>
         </div>
 
-        <div class="row" id="card-container">
-        <div class="row">
-            {% for item in items%}
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="item_image">
-                        <div class="card-body">
-                          <h5 class="card-title">{{ item.name }}</h5>
-                          <p class="card-text">{{ item.description }}</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item">{{ item.amount }}</li>
-                        </ul>
+        <div class="" id="card-container">
+              {% for item in items%}
+                  <div class="col-md-4 mb-3">
+                      <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="..." alt="item_image">
+                          <div class="card-body">
+                            <h5 class="card-title">{{ item.name }}</h5>
+                            <p class="card-text">{{ item.description }}</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ item.amount }}</li>
+                          </ul>
 
-                      <div class="card-body">
-                          <a href="{% url 'main:edit_product' item.pk %}">
-                            <button type="button" class="btn btn-info custom-button" type="button">
-                                Edit
-                            </button>
-                          </a>
-                          
-                          <a href="{% url 'main:delete_product' item.pk %}">
-                            <button class="btn btn-danger custom-button text-right" type="button">
-                                Delete
-                            </button>
-                          </a>
+                        <div class="card-body">
+                            <a href="{% url 'main:edit_product' item.pk %}">
+                              <button type="button" class="btn btn-info custom-button" type="button">
+                                  Edit
+                              </button>
+                            </a>
+                            
+                            <a href="{% url 'main:delete_product' item.pk %}">
+                              <button class="bg-transparent hover:bg-red-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded" type="button">
+                                  Delete
+                              </button>
+                            </a>
+                        </div>
                       </div>
-                    </div>
-                </div>
-            {% endfor %}
-      </div>
-      </div>
+                  </div>
+              {% endfor %}
+        </div>
           
       </div>
 
-      <!-- Footer-->
-      <footer class="bg-white py-4 mt-auto">
-        <div class="container px-5">
-            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                <div class="col-auto"><div class="small m-0">Copyright &copy; Soros Febriano 2023</div></div>
-                <div class="col-auto">
-
-                    <a href="{% url 'main:logout' %}">
-                      <button type="button" class="btn btn-primary">Logout</button>
-                    </a>
-
-                    <p>Sesi terakhir login: {{ last_login }}</p>
-
-                </div>
-            </div>
-        </div>
-    `</footer>
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade text-black" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -117,8 +99,8 @@
                             <input type="text" class="form-control" id="name" name="name"></input>
                         </div>
                         <div class="mb-3">
-                            <label for="amount" class="col-form-label">Amount:</label>
-                            <input type="number" class="form-control" id="amount" name="amount"></input>
+                            <label for="price" class="col-form-label">Price:</label>
+                            <input type="number" class="form-control" id="price" name="price"></input>
                         </div>
                         <div class="mb-3">
                             <label for="description" class="col-form-label">Description:</label>
@@ -128,12 +110,33 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="button_add" data-bs-dismiss="modal">Add Product</button>
+                    <button type="button" class="btn btn-primary" id="button_add" data-bs-dismiss="modal">Add Item</button>
                 </div>
             </div>
         </div>
-    </div>
+      </div>
 
+      
+
+      <!-- Footer-->
+      <footer class="bg-white text-stone-800 border-y-[10px]">
+        <div class="container px-5 ">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Soros Febriano 2023</div></div>
+                <div class="col-auto">
+
+                    <a href="{% url 'main:logout' %}">
+                      <button type="button" class="btn btn-primary text-stone-500">Logout</button>
+                    </a>
+
+                    <p>Sesi terakhir login: {{ last_login }}</p>
+
+                </div>
+            </div>
+        </div>
+      </footer>
+
+    
     <script>
         async function getItems() {
             return fetch("{% url 'main:get_item_json' %}").then((res) => res.json())
@@ -165,7 +168,7 @@
                     </a>
                     
                     <a href="delete/${item.pk}">
-                      <button class="btn btn-danger custom-button text-right" type="button">
+                      <button class="bg-transparent hover:bg-red-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded" type="button">
                           Delete
                       </button>
                     </a>
@@ -194,10 +197,8 @@
       
     </script>
 
-    {% endblock content %}
+{% endblock content %}
 
-  </body>
-</html>
 
 
 
