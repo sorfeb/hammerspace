@@ -1,5 +1,4 @@
 # **Link website: http://soros-febriano-tugas.pbp.cs.ui.ac.id/** 
-Tampilan pada web belum tentu selaras dengan template main.html karena kemungkinan deployment masih dalam queue
 
 # TUGAS 2
 ## Cara saya mengimplementasikan _checklist - checklist_ di ketentuan tugas: #1
