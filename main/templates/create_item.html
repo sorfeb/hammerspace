@@ -7,15 +7,19 @@
       background-repeat: no-repeat;
         background-size: cover; 
     }
+
+    .additemform {
+    color: black;
+    }
   </style>
 {% endblock meta %}
 
 {% block content %}
 <h1>Add New Item</h1>
 
-<form method="POST"> <!--block is using POST method-->
+<form method="POST" class="additemform"> <!--block is using POST method-->
     {% csrf_token %} <!--Security token-->
-    <table>
+    <table  class="tw-text-black">
         {{ form.as_table }} 
         <tr>
             <td></td>
